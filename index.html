@@ -102,20 +102,52 @@ select:focus{outline:2px solid var(--purple);outline-offset:1px}
 .wording-row:last-child{border-bottom:none}
 .notice-banner{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:var(--radius);padding:12px 16px;font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:16px}
 .notice-banner strong{color:var(--red-text)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;font-size:22px;padding:4px 8px;color:var(--text)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:200}
+.mobile-menu.open{display:block}
+.mobile-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4)}
+.mobile-drawer{position:absolute;top:0;left:0;width:80%;max-width:300px;height:100%;background:var(--surface);overflow-y:auto;padding:16px 0}
+.mobile-close{display:block;text-align:right;padding:8px 16px;font-size:22px;background:none;border:none;cursor:pointer;color:var(--text)}
 @media(max-width:640px){
   nav{display:none}
   main{padding:16px}
+  .hamburger{display:block}
+  .header-left p{display:none}
 }
 </style>
 </head>
 <body>
+
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-overlay" onclick="closeMenu()"></div>
+  <div class="mobile-drawer">
+    <button class="mobile-close" onclick="closeMenu()">✕</button>
+    <div class="nav-section">判定・ルール</div>
+    <button class="nav-btn active" onclick="show('判定ツール',this);closeMenu()">▶ 判定ツール</button>
+    <button class="nav-btn" onclick="show('マトリクス',this);closeMenu()">併願マトリクス</button>
+    <button class="nav-btn" onclick="show('文言の読み方',this);closeMenu()">文言の読み方</button>
+    <button class="nav-btn" onclick="show('大学別一覧',this);closeMenu()">大学別一覧</button>
+    <div class="nav-section">指導・手続き</div>
+    <button class="nav-btn" onclick="show('併願ルール詳細',this);closeMenu()">併願ルール詳細</button>
+    <button class="nav-btn" onclick="show('手続き',this);closeMenu()">手続き・スケジュール</button>
+    <button class="nav-btn" onclick="show('担任チェック',this);closeMenu()">担任チェックリスト</button>
+    <div class="nav-section">共立女子大</div>
+    <button class="nav-btn" onclick="show('成績不振層',this);closeMenu()">成績不振層の指導</button>
+    <button class="nav-btn" onclick="show('併設特別',this);closeMenu()">併設特別推薦</button>
+    <div class="nav-section">Q&amp;A</div>
+    <button class="nav-btn" onclick="show('FAQ',this);closeMenu()">よくある質問</button>
+  </div>
+</div>
 
 <header>
   <div class="header-left">
     <h1>推薦入試対応ガイド 2026年度</h1>
     <p>共立女子中学高等学校 進路支援部｜高3担任・校務委員向け</p>
   </div>
-  <span class="header-badge">教員限定資料</span>
+  <div style="display:flex;align-items:center;gap:8px">
+    <span class="header-badge">教員限定資料</span>
+    <button class="hamburger" onclick="openMenu()">☰</button>
+  </div>
 </header>
 
 <div class="layout">
@@ -424,6 +456,8 @@ function filterUniv(f,btn){
 }
 renderUnivs();
 
+function openMenu(){document.getElementById('mobile-menu').classList.add('open')}
+function closeMenu(){document.getElementById('mobile-menu').classList.remove('open')}
 function show(name,btn){
   document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
   document.querySelectorAll(".nav-btn").forEach(b=>b.classList.remove("active"));
