@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>推薦入試対応ガイド 2026年度｜共立女子中学高等学校 進路支援部</title>
+<style>
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface2:#f3f1ed;
+  --border:#e0ddd8;
+  --border2:#ccc9c2;
+  --text:#1a1917;
+  --text2:#5a5854;
+  --text3:#8a8784;
+  --purple:#534AB7;
+  --purple-bg:#EEEDFE;
+  --purple-text:#3C3489;
+  --teal:#0F6E56;
+  --teal-bg:#E1F5EE;
+  --teal-text:#085041;
+  --amber:#854F0B;
+  --amber-bg:#FAEEDA;
+  --amber-text:#633806;
+  --red:#A32D2D;
+  --red-bg:#FCEBEB;
+  --red-text:#791F1F;
+  --radius:8px;
+  --radius-lg:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hiragino Sans','Yu Gothic UI','Meiryo',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.7}
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.header-left h1{font-size:16px;font-weight:600;letter-spacing:.02em}
+.header-left p{font-size:11px;color:var(--text3);margin-top:2px}
+.header-badge{background:var(--purple-bg);color:var(--purple-text);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500}
+.layout{display:flex;min-height:calc(100vh - 57px)}
+nav{width:200px;flex-shrink:0;background:var(--surface);border-right:1px solid var(--border);padding:16px 0;position:sticky;top:57px;height:calc(100vh - 57px);overflow-y:auto}
+.nav-section{padding:6px 16px 2px;font-size:10px;color:var(--text3);font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-top:8px}
+.nav-section:first-child{margin-top:0}
+.nav-btn{display:block;width:100%;text-align:left;padding:8px 16px;font-size:13px;color:var(--text2);background:none;border:none;cursor:pointer;font-family:inherit;border-left:2px solid transparent;transition:all .15s}
+.nav-btn:hover{color:var(--text);background:var(--surface2)}
+.nav-btn.active{color:var(--purple);background:var(--purple-bg);border-left-color:var(--purple);font-weight:500}
+main{flex:1;padding:28px 32px;max-width:820px;overflow-y:auto}
+.panel{display:none}.panel.active{display:block}
+h2{font-size:17px;font-weight:600;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+h3{font-size:14px;font-weight:600;margin-bottom:10px}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;font-weight:600;vertical-align:middle}
+.tag-red{background:var(--red-bg);color:var(--red-text)}
+.tag-amber{background:var(--amber-bg);color:var(--amber-text)}
+.tag-teal{background:var(--teal-bg);color:var(--teal-text)}
+.tag-purple{background:var(--purple-bg);color:var(--purple-text)}
+.tag-gray{background:var(--surface2);color:var(--text2)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 20px;margin-bottom:12px}
+.ok-box{background:var(--teal-bg);border:1px solid #9FE1CB;border-radius:var(--radius);padding:10px 14px;font-size:13px;color:var(--teal-text);margin-bottom:10px;line-height:1.6}
+.ng-box{background:var(--red-bg);border:1px solid #F09595;border-radius:var(--radius);padding:10px 14px;font-size:13px;color:var(--red-text);margin-bottom:10px;line-height:1.6}
+.warn-box{background:var(--amber-bg);border:1px solid #EF9F27;border-radius:var(--radius);padding:10px 14px;font-size:13px;color:var(--amber-text);margin-bottom:10px;line-height:1.6}
+.info-box{background:var(--purple-bg);border:1px solid #AFA9EC;border-radius:var(--radius);padding:10px 14px;font-size:13px;color:var(--purple-text);margin-bottom:10px;line-height:1.6}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{background:var(--surface2);padding:8px 10px;text-align:center;border:1px solid var(--border);font-weight:600;font-size:11px}
+td{padding:7px 10px;border:1px solid var(--border);text-align:center;vertical-align:middle}
+.td-left{text-align:left;font-weight:500;background:var(--surface2)}
+.cell-ng{background:#FCEBEB;color:#791F1F;font-weight:600}
+.cell-ok{background:#E1F5EE;color:#085041;font-weight:600}
+.cell-warn{background:#FAEEDA;color:#633806;font-weight:600}
+.cell-note{background:#EEEDFE;color:#3C3489;font-weight:600}
+select{width:100%;padding:10px 12px;border:1px solid var(--border2);border-radius:var(--radius);font-size:14px;font-family:inherit;background:var(--surface);color:var(--text);margin-bottom:12px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238a8784' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+select:focus{outline:2px solid var(--purple);outline-offset:1px}
+.judge-result{border-radius:var(--radius);padding:14px 16px;font-size:14px;line-height:1.7;display:none;margin-top:4px}
+.result-ok{background:var(--teal-bg);color:var(--teal-text);display:block}
+.result-warn{background:var(--amber-bg);color:var(--amber-text);display:block}
+.result-ng{background:var(--red-bg);color:var(--red-text);display:block}
+.result-note{background:var(--purple-bg);color:var(--purple-text);display:block}
+.filter-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.filter-btn{padding:5px 14px;font-size:12px;border:1px solid var(--border2);border-radius:20px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--text2);transition:all .15s}
+.filter-btn:hover{border-color:var(--purple);color:var(--purple)}
+.filter-btn.active{background:var(--purple-bg);color:var(--purple-text);border-color:#AFA9EC;font-weight:500}
+.univ-item{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--border)}
+.univ-item:last-child{border-bottom:none}
+.univ-name{flex:1;font-size:13px;line-height:1.5}
+.univ-note{font-size:11px;color:var(--text3);margin-top:1px}
+.checklist li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--border);list-style:none;font-size:13px;line-height:1.6}
+.checklist li:last-child{border-bottom:none}
+.check-icon{color:var(--purple);flex-shrink:0;margin-top:2px;font-size:15px}
+.flow-step{display:flex;gap:14px;align-items:stretch;margin-bottom:0}
+.flow-left{display:flex;flex-direction:column;align-items:center;width:34px;flex-shrink:0}
+.flow-num{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0}
+.flow-line{width:1px;background:var(--border);flex:1;margin:3px 0}
+.flow-body{flex:1;padding-bottom:18px}
+.flow-date{font-size:11px;font-weight:600;margin-bottom:3px}
+.flow-title{font-size:14px;font-weight:600;margin-bottom:3px}
+.flow-desc{font-size:12px;color:var(--text2);line-height:1.6}
+.q-block{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px;overflow:hidden}
+.q-head{padding:12px 16px;font-size:13px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--surface2);gap:8px}
+.q-head:hover{background:var(--border)}
+.q-body{padding:12px 16px;font-size:13px;color:var(--text2);line-height:1.7;display:none;border-top:1px solid var(--border)}
+.q-body.open{display:block}
+.q-arrow{font-size:12px;flex-shrink:0;transition:transform .2s}
+.q-head.open .q-arrow{transform:rotate(180deg)}
+.wording-row{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border)}
+.wording-row:last-child{border-bottom:none}
+.notice-banner{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:var(--radius);padding:12px 16px;font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:16px}
+.notice-banner strong{color:var(--red-text)}
+@media(max-width:640px){
+  nav{display:none}
+  main{padding:16px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <h1>推薦入試対応ガイド 2026年度</h1>
+    <p>共立女子中学高等学校 進路支援部｜高3担任・校務委員向け</p>
+  </div>
+  <span class="header-badge">教員限定資料</span>
+</header>
+
+<div class="layout">
+<nav>
+  <div class="nav-section">判定・ルール</div>
+  <button class="nav-btn active" onclick="show('判定ツール',this)">▶ 判定ツール</button>
+  <button class="nav-btn" onclick="show('マトリクス',this)">併願マトリクス</button>
+  <button class="nav-btn" onclick="show('文言の読み方',this)">文言の読み方</button>
+  <button class="nav-btn" onclick="show('大学別一覧',this)">大学別一覧</button>
+  <div class="nav-section">指導・手続き</div>
+  <button class="nav-btn" onclick="show('併願ルール詳細',this)">併願ルール詳細</button>
+  <button class="nav-btn" onclick="show('手続き',this)">手続き・スケジュール</button>
+  <button class="nav-btn" onclick="show('担任チェック',this)">担任チェックリスト</button>
+  <div class="nav-section">共立女子大</div>
+  <button class="nav-btn" onclick="show('成績不振層',this)">成績不振層の指導</button>
+  <button class="nav-btn" onclick="show('併設特別',this)">併設特別推薦</button>
+  <div class="nav-section">Q&amp;A</div>
+  <button class="nav-btn" onclick="show('FAQ',this)">よくある質問</button>
+</nav>
+
+<main>
+
+<!-- 判定ツール -->
+<div id="panel-判定ツール" class="panel active">
+  <h2>判定ツール — 生徒の状況を選んで可否を確認</h2>
+  <div class="notice-banner"><strong>注意：</strong>この判定はあくまで目安です。校内選考通過者が他の選抜と併願する場合は必ず<strong>誓約書を取ること</strong>。個別の案件は進路指導部に確認してください。</div>
+  <div class="card">
+    <label style="font-size:13px;color:var(--text2);display:block;margin-bottom:4px">① 生徒が出願しようとしている選抜の種類</label>
+    <select id="sel-A" onchange="judge()">
+      <option value="">── 選択してください ──</option>
+      <option value="shiteiko">指定校推薦</option>
+      <option value="koubo-sengan">学校推薦型（公募・専願）</option>
+      <option value="sogo-sengan">総合型（専願・併願禁止）</option>
+      <option value="sogo-daiichi">総合型（第一志望要件）</option>
+    </select>
+    <label style="font-size:13px;color:var(--text2);display:block;margin-bottom:4px">② 同時に出願しようとしている別の選抜</label>
+    <select id="sel-B" onchange="judge()">
+      <option value="">── 選択してください ──</option>
+      <option value="shiteiko">別の指定校推薦</option>
+      <option value="koubo-sengan">学校推薦型（公募・専願）</option>
+      <option value="koubo-heigan">学校推薦型（公募・併願可）</option>
+      <option value="sogo-sengan">総合型（専願・併願禁止）</option>
+      <option value="sogo-daiichi">総合型（第一志望要件）</option>
+      <option value="sogo-heigan">総合型（併願明記）</option>
+    </select>
+    <div id="judge-result" class="judge-result"></div>
+  </div>
+</div>
+
+<!-- マトリクス -->
+<div id="panel-マトリクス" class="panel">
+  <h2>併願マトリクス — 出願する選抜 × 同時出願先の可否</h2>
+  <div style="overflow-x:auto;margin-bottom:16px">
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:left;min-width:120px">↓出願する選抜</th>
+          <th>指定校</th><th>公募（専願）</th><th>公募（併願可）</th><th>総合（専願）</th><th>総合（第一志望）</th><th>総合（併願明記）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="td-left">指定校</td><td class="cell-ng">×</td><td class="cell-ng">×</td><td class="cell-note">※</td><td class="cell-ng">×</td><td class="cell-warn">△※</td><td class="cell-note">※</td></tr>
+        <tr><td class="td-left">公募（専願）</td><td class="cell-ng">×</td><td class="cell-ng">×</td><td class="cell-note">※</td><td class="cell-ng">×</td><td class="cell-warn">△※</td><td class="cell-note">※</td></tr>
+        <tr><td class="td-left">総合（専願）</td><td class="cell-ng">×</td><td class="cell-ng">×</td><td class="cell-note">※</td><td class="cell-ng">×</td><td class="cell-warn">△※</td><td class="cell-note">※</td></tr>
+        <tr><td class="td-left">総合（第一志望）</td><td class="cell-note">※</td><td class="cell-note">※</td><td class="cell-ok">○</td><td class="cell-note">※</td><td class="cell-warn">△</td><td class="cell-ok">○</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;font-size:12px;margin-bottom:14px">
+    <span><span class="tag tag-teal">○</span> 出願可</span>
+    <span><span class="tag tag-red">×</span> 出願不可</span>
+    <span><span class="tag tag-amber">△</span> 推奨せず・本人判断</span>
+    <span><span class="tag tag-purple">※</span> 誓約書が必要</span>
+  </div>
+  <div class="warn-box">学校長推薦が必要な年内入試は「併願可」という文言がない限り専願扱い。ICUは大学側が明示的に不可としている。</div>
+</div>
+
+<!-- 文言の読み方 -->
+<div id="panel-文言の読み方" class="panel">
+  <h2>要項の文言から専願・併願を判定する目安</h2>
+  <div class="card">
+    <div class="wording-row"><span class="tag tag-red" style="flex-shrink:0;margin-top:2px">専願</span><div><strong>「専願・併願禁止」「合格後の入学辞退は不可」「入学を確約できる者」</strong><br><span style="color:var(--text2)">→ 専願扱いが妥当。指定校や公募と同時出願しようとする生徒には専願として指導。</span></div></div>
+    <div class="wording-row"><span class="tag tag-amber" style="flex-shrink:0;margin-top:2px">要注意</span><div><strong>「他大受験は可だが合格なら入学」「本学への入学を前提に他大との併願を認める」</strong><br><span style="color:var(--text2)">→ 合格したら入学という扱いが妥当。第一志望要件として誓約書を取る。</span></div></div>
+    <div class="wording-row"><span class="tag tag-teal" style="flex-shrink:0;margin-top:2px">実質併願</span><div><strong>「第一志望」のみの記載</strong><br><span style="color:var(--text2)">→ 実質、併願扱いでよい。ただし学校として判断はしない（本人判断）。</span></div></div>
+    <div class="wording-row"><span class="tag tag-teal" style="flex-shrink:0;margin-top:2px">実質併願</span><div><strong>「強く希望する者」「記載なし」</strong><br><span style="color:var(--text2)">→ 併願扱いが妥当。</span></div></div>
+    <div class="wording-row"><span class="tag tag-teal" style="flex-shrink:0;margin-top:2px">併願可</span><div><strong>「併願可」と明記</strong><br><span style="color:var(--text2)">→ 問題なく併願可。</span></div></div>
+  </div>
+  <div class="info-box"><strong>債務不履行について</strong>　文科省ルール上、総合型で専願を強制することは本来想定されていません。過去の最高裁判決でも大学側の債務不履行請求は認められていません。ただし一般受験等で大学が共立生に不利な対応をしないとは言い切れないため、慎重な指導が必要です。生徒指導の場では「大学から入学義務を果たさないことで問題視される可能性がある」という言い方が適切です。</div>
+</div>
+
+<!-- 大学別一覧 -->
+<div id="panel-大学別一覧" class="panel">
+  <h2>主要大学の総合型選抜 専願・併願区分（2024年度生実績）</h2>
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterUniv('all',this)">すべて</button>
+    <button class="filter-btn" onclick="filterUniv('sengan',this)">専願扱い</button>
+    <button class="filter-btn" onclick="filterUniv('daiichi',this)">第一志望要件</button>
+    <button class="filter-btn" onclick="filterUniv('heigan',this)">併願可</button>
+  </div>
+  <div class="card" style="padding:0 20px">
+    <div id="univ-list"></div>
+  </div>
+</div>
+
+<!-- 併願ルール詳細 -->
+<div id="panel-併願ルール詳細" class="panel">
+  <h2>併願ルール詳細</h2>
+  <div class="ok-box"><strong>できるケース①</strong>　指定校出願済みで、<strong>同一大学・同一学部・同一学科</strong>の総合型（併願可）へ同時出願。大学への確認が必要な場合あり。</div>
+  <div class="ok-box"><strong>できるケース②</strong>　校内選考通過後も、他大学の総合型（学校長推薦不要・併願可）への出願・受験。ただし<strong>指定校合格校への進学は厳守</strong>。</div>
+  <div class="ng-box"><strong>できないケース①</strong>　指定校校内選考通過者が、他大学・他学部・他学科の総合型（専願）と併願することは認めない。</div>
+  <div class="ng-box"><strong>できないケース②</strong>　専願の公募が第二志望、総合型（併願可）が第一志望のまま同時出願（両方合格時は専願合格校へ必ず進学）。</div>
+  <div class="warn-box">学校推薦型（公募）で「併願可」と<strong>明記されていない</strong>ものは指定校推薦と同じ扱い。</div>
+  <div class="card" style="margin-top:4px">
+    <h3 style="margin-bottom:12px">専願 vs 併願のパターン早見表</h3>
+    <table>
+      <thead><tr style="background:var(--surface2)"><th style="text-align:left">第一志望</th><th style="text-align:left">第二志望</th><th>判定</th></tr></thead>
+      <tbody>
+        <tr><td>専願指定の大学A</td><td>併願可の大学B</td><td><span class="tag tag-teal">○ 可（確約書要）</span></td></tr>
+        <tr><td>併願可の大学A</td><td>専願指定の大学B</td><td><span class="tag tag-red">× 不可</span></td></tr>
+        <tr><td>総合型（専願）複数</td><td>同時出願</td><td><span class="tag tag-amber">△ 非推奨・本人判断</span></td></tr>
+        <tr><td>指定校（校内通過）</td><td>同一大学同一学部の総合型</td><td><span class="tag tag-teal">○ 可（大学確認要）</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 手続き -->
+<div id="panel-手続き" class="panel">
+  <h2>手続き・スケジュール</h2>
+  <div class="flow-step">
+    <div class="flow-left"><div class="flow-num" style="background:var(--purple-bg);color:var(--purple-text)">1</div><div class="flow-line"></div></div>
+    <div class="flow-body"><div class="flow-date" style="color:var(--purple-text)">〜7月19日（9/5以前に出願する場合）</div><div class="flow-title">書類一式を担任へ提出</div><div class="flow-desc">申込書・募集要項（原本）・推薦書・資格証明・証明申込書。出願14日前が原則。募集要項は生徒が1冊丸ごとコピーし原本を担任へ。</div></div>
+  </div>
+  <div class="flow-step">
+    <div class="flow-left"><div class="flow-num" style="background:var(--purple-bg);color:var(--purple-text)">2</div><div class="flow-line"></div></div>
+    <div class="flow-body"><div class="flow-date" style="color:var(--purple-text)">公募後〜1週間</div><div class="flow-title">人数制限ありの場合：校内公募・選考</div><div class="flow-desc">掲示で公募期間を設け、希望者が複数の場合は校内で選考。</div></div>
+  </div>
+  <div class="flow-step">
+    <div class="flow-left"><div class="flow-num" style="background:var(--teal-bg);color:var(--teal-text)">3</div><div class="flow-line"></div></div>
+    <div class="flow-body"><div class="flow-date" style="color:var(--teal-text)">出願直前</div><div class="flow-title">志望理由書・ESの担任チェック</div><div class="flow-desc">提出前に最低1回は担任チェック。手書き指定でも下書きはWord等データで作成。担任と日程が合わない場合はメール対応も可。</div></div>
+  </div>
+  <div class="flow-step">
+    <div class="flow-left"><div class="flow-num" style="background:var(--teal-bg);color:var(--teal-text)">4</div><div class="flow-line"></div></div>
+    <div class="flow-body"><div class="flow-date" style="color:var(--teal-text)">封筒完成後</div><div class="flow-title">最終チェック → 2部コピー → 書留郵送</div><div class="flow-desc">担任OKが出てから全書類を2部コピー（1部自分保存・1部担任提出）。<strong>ポスト投函は厳禁。書留・窓口から。</strong><br>指定校は学校が窓口。生徒が直接郵送しないよう徹底。</div></div>
+  </div>
+  <div class="flow-step">
+    <div class="flow-left"><div class="flow-num" style="background:var(--amber-bg);color:var(--amber-text)">5</div></div>
+    <div class="flow-body"><div class="flow-date" style="color:var(--amber-text)">合格後</div><div class="flow-title">進路決定 → 調査書の追加発行なし</div><div class="flow-desc">指定校・専願公募合格後は調査書発行不可（受験目的）。共通テスト受験は各自の判断に委ねる。</div></div>
+  </div>
+  <div class="warn-box" style="margin-top:8px">専願の大学に合格しながら進学しないケースは学校の信用問題。確約書の徹底と保護者への説明が必要。</div>
+</div>
+
+<!-- 担任チェックリスト -->
+<div id="panel-担任チェック" class="panel">
+  <h2>担任チェックリスト</h2>
+  <ul class="checklist">
+    <li><span class="check-icon">☑</span><div><strong>総合型への出願は必ず担任に申し出させる</strong><br><span style="color:var(--text2)">学校長推薦不要のものも含め、黙って出願させない。</span></div></li>
+    <li><span class="check-icon">☑</span><div><strong>要項の文言を一緒に精読し、専願・第一志望・併願可を確認</strong><br><span style="color:var(--text2)">「第一志望」のみの記載は実質併願可だが、学校として判断はしない。本人に自覚させる。</span></div></li>
+    <li><span class="check-icon">☑</span><div><strong>複数合格時の辞退リスクを保護者も含めて説明し確約書を取得</strong><br><span style="color:var(--text2)">法的に債務不履行は成立しないが、大学との関係上問題になりうることを説明。</span></div></li>
+    <li><span class="check-icon">☑</span><div><strong>エントリーシート・志望理由書は提出前に担任チェック（最低1回）</strong><br><span style="color:var(--text2)">他に指導者がいる場合も担任が確認。</span></div></li>
+    <li><span class="check-icon">☑</span><div><strong>書類はコピーで練習 → 鉛筆下書き → ペン清書</strong><br><span style="color:var(--text2)">消し忘れ・カスレ・破れに注意。事務室前の白い証明申込書を使用。</span></div></li>
+    <li><span class="check-icon">☑</span><div><strong>郵送は書留・窓口から（ポスト投函は絶対禁止）</strong><br><span style="color:var(--text2)">指定校は学校が窓口。生徒への指示を誤らないよう注意。</span></div></li>
+    <li><span class="check-icon">☑</span><div><strong>民間英語スコアは原本を申請させる</strong><br><span style="color:var(--text2)">本校はコピー＋証明印での対応はしない。担任間でばらつきが出ないよう徹底。</span></div></li>
+    <li><span class="check-icon">☑</span><div><strong>オープンキャンパスへの参加を6月の進路行事で促す</strong><br><span style="color:var(--text2)">指定校・併設特別問わず参加していない生徒が多い。入学後のミスマッチ防止のため研究を義務づける。</span></div></li>
+    <li><span class="check-icon">☑</span><div><strong>小論文は国語科・外国語科へアウトソース。担任一人で抱え込まない</strong><br><span style="color:var(--text2)">志望理由書は原則担任。カンザキメソッド等の外部も活用可。</span></div></li>
+  </ul>
+</div>
+
+<!-- 成績不振層 -->
+<div id="panel-成績不振層" class="panel">
+  <h2>共立女子大・短大 成績不振層への指導（評定平均値3.4未満）</h2>
+  <div class="warn-box">短大併設特別と四大併設特別は<strong>併願不可</strong>（2019年より）。短大からの編入も評定下位者は視野に。</div>
+  <div class="card">
+    <h3>文芸・国際の場合</h3>
+    <ul style="font-size:13px;color:var(--text2);padding-left:16px;line-height:1.9">
+      <li>確実に入学したいのであれば、<strong>指定校推薦を強く勧める</strong>（指定校基準なし）。</li>
+      <li>総合型選抜は専願型になっているので要注意。基礎学力方式（併願可）は評定が低くても合格する生徒がいるかどうかは志願者数と定員充足率次第。安易に前年度から楽観させない。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>ビジネスの場合</h3>
+    <p style="font-size:13px;color:var(--text2)">指定校・併設ともに基準3.6のため、総合型からチャレンジさせる。</p>
+  </div>
+  <div class="card">
+    <h3>家政・建築・デザインの場合</h3>
+    <p style="font-size:13px;color:var(--text2)">ポートフォリオ・実技などが求められるが、対応可能ならばチャレンジさせる。</p>
+  </div>
+  <div class="card">
+    <h3>看護・被服・食物栄養の場合</h3>
+    <p style="font-size:13px;color:var(--text2)">被服・児童・看護は第一志望なら、厳しい道だが総合型選抜（専願）にチャレンジさせる。ある程度の学力があれば基礎学力方式で他併願できる。</p>
+  </div>
+  <div class="info-box">評定平均値3.4未満で文芸・国際以外の志願者は非常に厳しい入試を強いられる。現役入学を強く希望するケースなら、短大併設特別（生活・文科）の利用か指定校推薦という選択肢での検討も必要。</div>
+</div>
+
+<!-- 併設特別 -->
+<div id="panel-併設特別" class="panel">
+  <h2>共立女子大 併設特別推薦入試の指導</h2>
+  <div class="card">
+    <ul style="font-size:13px;color:var(--text2);padding-left:16px;line-height:2">
+      <li>他大学が全て不合格の場合には、入学することを前提としている。<strong>「とりあえず確保」は避けること。</strong></li>
+      <li>2027年度入試は定期試験中に入試、合格発表は12月17日。合格発表が年内にあるため冬休みの受験対策に有難い。</li>
+      <li>過去には大量不合格もあった。「絶対に合格するシステム」ではない。面接・小論文が論外（沈黙・白紙）のケースでは不合格になる可能性もある。</li>
+      <li>一般受験へのモチベーションが落ちないよう指導することが必要。上位者であれば別のsafety netも作れるので無理に利用させなくてもよい。</li>
+      <li>併設特別推薦合格者の進学者は年々減少（2023年：合格106→手続き19 / 2022年：合格119→入学28）。</li>
+    </ul>
+  </div>
+  <div class="warn-box">2026年度入試合格実績：基礎学力5/12、リーダーシップ2/5、指定校7名、併設合格81→手続き36→進学14</div>
+  <div class="info-box">2027年度入試について併設高校特別推薦に変更はなし。その他学校推薦型選抜で出願資格の変更や名称変更あり。</div>
+</div>
+
+<!-- FAQ -->
+<div id="panel-FAQ" class="panel">
+  <h2>よくある質問（FAQ）</h2>
+  <div class="q-block">
+    <div class="q-head" onclick="toggleQ(this)"><span>指定校の校内選考を通過したが、正式合格前に他大学の総合型を受けてもよいか？</span><span class="q-arrow">▼</span></div>
+    <div class="q-body">学校長推薦不要・併願可の総合型であれば出願・受験は禁じない。ただし指定校合格校以外への進学は不可。</div>
+  </div>
+  <div class="q-block">
+    <div class="q-head" onclick="toggleQ(this)"><span>専願の公募が第二志望で、総合型（併願可）が第一志望のまま同時出願できるか？</span><span class="q-arrow">▼</span></div>
+    <div class="q-body">出願は妨げないが、両方合格した場合は専願合格校へ進学が原則。保護者に確約書の提出が必要。</div>
+  </div>
+  <div class="q-block">
+    <div class="q-head" onclick="toggleQ(this)"><span>指定校で合格後、同一大学の総合型にも合格した場合は？</span><span class="q-arrow">▼</span></div>
+    <div class="q-body">原則として指定校での入学を優先。大学が総合型での入学を認めている場合のみ、進路指導部に連絡の上判断。必ず担任を通じて報告させること。</div>
+  </div>
+  <div class="q-block">
+    <div class="q-head" onclick="toggleQ(this)"><span>指定校・専願公募合格後も受験を続けたいという生徒への対応は？</span><span class="q-arrow">▼</span></div>
+    <div class="q-body">合格後は調査書の発行はできない（受験目的）。共通テストの受験のみ各自の判断に委ねる。担任が曖昧な対応をしないよう徹底。</div>
+  </div>
+  <div class="q-block">
+    <div class="q-head" onclick="toggleQ(this)"><span>「第一志望」要件のある大学の総合型と指定校を同時出願したいが？</span><span class="q-arrow">▼</span></div>
+    <div class="q-body">推奨しないが禁止もしない。両方合格した場合は指定校合格校へ進学する旨の誓約書を取る。「大学から入学義務を果たさないことで問題視される可能性がある」ことを生徒・保護者に説明した上で本人判断とする。</div>
+  </div>
+  <div class="q-block">
+    <div class="q-head" onclick="toggleQ(this)"><span>指定校校内選考の締切前に、第二志望の総合型の締切が来てしまう場合は？</span><span class="q-arrow">▼</span></div>
+    <div class="q-body">学校としては推奨しない（内部選考を通過してそちらへ進学するのは学校の信用問題）。ただし指定校合格校への入学を前提とするなら出願は禁止しない。早めに進路指導部に相談させること。</div>
+  </div>
+</div>
+
+</main>
+</div>
+
+<script>
+const UNIVS=[
+  {name:"東邦大学（医学部）",tag:"sengan",note:"誓約書あり・辞退者数不明"},
+  {name:"洗足学園音楽大学",tag:"sengan",note:"専願に限る"},
+  {name:"神奈川歯科大学",tag:"sengan",note:"合格後の入学辞退は不可"},
+  {name:"国際基督教大学（ICU）",tag:"sengan",note:"「専願」という名称。大学側も明示・不可"},
+  {name:"聖路加看護大学",tag:"sengan",note:"「必ず入学」要件"},
+  {name:"二松学舎大学 総合型",tag:"sengan",note:"専願制（2024年度生は併願可と解釈して出願）"},
+  {name:"藤田医科大学（医学部）",tag:"sengan",note:"国公立医学部合格以外は辞退不可・入学金返還なし"},
+  {name:"東京薬科大学 山梨地域枠",tag:"sengan",note:"専願制"},
+  {name:"明治大学 農学部自己推薦",tag:"sengan",note:"専願"},
+  {name:"東京科学大学 工学院総合型",tag:"sengan",note:"合格者の入学辞退は認めない（辞退事由提出は可）"},
+  {name:"金沢医科大学（医学部）",tag:"sengan",note:"2024年度生は専願として出願"},
+  {name:"玉川大学",tag:"sengan",note:"2024年度生は専願として出願"},
+  {name:"高知大学（医学部医学科）",tag:"sengan",note:"2024年度生は専願として出願"},
+  {name:"東京理科大学 総合型",tag:"sengan",note:"2024年度生は専願として出願"},
+  {name:"順天堂大学（看護）総合型",tag:"sengan",note:"2024年度生は専願として出願"},
+  {name:"東邦大学 総合型（看護）",tag:"sengan",note:"2024年度生は専願として出願"},
+  {name:"慶應義塾大学 FIT入試",tag:"daiichi",note:"「入学を確約できる者」：2024年度生は受験なし"},
+  {name:"日本大学（芸術学部）",tag:"daiichi",note:"「入学を確約できる者」：2024年度生は併願として出願"},
+  {name:"慶應義塾大学 看護学部総合型",tag:"daiichi",note:"「第一志望として入学を強く希望」：2024年度生は専願型と解釈"},
+  {name:"東京農業大学 総合型",tag:"daiichi",note:"第一次合格者の辞退を牽制・第二次合格者入学前提"},
+  {name:"明治大学 自己推薦（文/国際日本/総合数理）",tag:"daiichi",note:"「合格した場合は入学を前提として他大との併願を認める」"},
+  {name:"同志社大学 総合型",tag:"daiichi",note:"「第一志望として入学を志す者」"},
+  {name:"立命館大学",tag:"daiichi",note:"「第一志望を強く希望する者」"},
+  {name:"青山学院大学（文/史/地球/コミュニティ/理工系女子）",tag:"daiichi",note:"「第一志望として」。入学率55.7%"},
+  {name:"慶應義塾大学 SFC（総合政策・環境情報）",tag:"daiichi",note:"「第一志望としていずれかの学部での勉強を希望」"},
+  {name:"青山学院大学（文・英米文）",tag:"heigan",note:"記載なし（実質併願可）"},
+  {name:"立教大学 自由選抜入試（全学部）",tag:"heigan",note:"「強い意欲」のみ"},
+  {name:"早稲田大学 文化構想学部 JCulP",tag:"heigan",note:"「強く希望する者」"},
+  {name:"法政大学",tag:"heigan",note:"「強く希望する者」。ただし専願明記の方式も多数あり注意"},
+  {name:"中央大学 自由選抜入試",tag:"heigan",note:"「併願可」と明記"},
+  {name:"國學院大學 総合型",tag:"heigan",note:"「併願可」と明記"},
+  {name:"成城大学（経済・文芸・社会イノベ・法）",tag:"heigan",note:"「併願可」と明記"},
+  {name:"明治大学 理工学部自己推薦",tag:"heigan",note:"「併願可」と明記"},
+  {name:"工学院大学（自己推薦・探究成果活用型）",tag:"heigan",note:"「併願可」と明記"},
+  {name:"武蔵野大学 総合型",tag:"heigan",note:"記載なし（実質併願可）"},
+  {name:"日本女子大学 総合型",tag:"heigan",note:"記載なし（実質併願可）"},
+  {name:"早稲田大学 国際教養学部",tag:"heigan",note:"記載なし（実質併願可）"},
+  {name:"上智大学 国際教養学部",tag:"heigan",note:"記載なし（実質併願可）"},
+  {name:"東海大学 医学部医学科",tag:"heigan",note:"「併願可」と明記"},
+  {name:"早稲田大学 社会科学部",tag:"heigan",note:"記載なし（実質併願可）"},
+];
+
+let currentFilter="all";
+function renderUnivs(){
+  const list=document.getElementById("univ-list");
+  list.innerHTML="";
+  const filtered=currentFilter==="all"?UNIVS:UNIVS.filter(u=>u.tag===currentFilter);
+  filtered.forEach(u=>{
+    const label=u.tag==="sengan"?"専願":u.tag==="daiichi"?"第一志望要件":"併願可";
+    const cls=u.tag==="sengan"?"tag-red":u.tag==="daiichi"?"tag-amber":"tag-teal";
+    const div=document.createElement("div");
+    div.className="univ-item";
+    div.innerHTML=`<span class="tag ${cls}" style="flex-shrink:0;margin-top:3px">${label}</span><div><div class="univ-name">${u.name}</div><div class="univ-note">${u.note}</div></div>`;
+    list.appendChild(div);
+  });
+}
+function filterUniv(f,btn){
+  currentFilter=f;
+  document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  renderUnivs();
+}
+renderUnivs();
+
+function show(name,btn){
+  document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+  document.querySelectorAll(".nav-btn").forEach(b=>b.classList.remove("active"));
+  document.getElementById("panel-"+name).classList.add("active");
+  btn.classList.add("active");
+}
+
+function toggleQ(el){
+  const body=el.nextElementSibling;
+  const isOpen=body.classList.contains("open");
+  body.classList.toggle("open");
+  el.classList.toggle("open",!isOpen);
+}
+
+const RULES={
+  "shiteiko-koubo-sengan":"ng:不可です。指定校と学校推薦型（公募・専願）の同時出願は認められません。",
+  "shiteiko-koubo-heigan":"note:出願できますが、誓約書が必要です。指定校合格校への進学を厳守してください。",
+  "shiteiko-sogo-sengan":"ng:不可です。指定校と総合型（専願）の同時出願は認められません。",
+  "shiteiko-sogo-daiichi":"warn:推奨しませんが禁止はしません（本人判断）。両方合格した場合は指定校合格校へ進学する旨の誓約書を取ってください。「大学から問題視される可能性がある」ことを生徒・保護者に説明してください。",
+  "shiteiko-sogo-heigan":"note:出願できますが、誓約書が必要です。指定校合格後、他大学には進学できません。",
+  "koubo-sengan-koubo-sengan":"ng:不可です。公募（専願）同士の同時出願は認められません。",
+  "koubo-sengan-koubo-heigan":"note:出願できますが、誓約書が必要です。両方合格した場合は専願の公募合格校へ進学してください。",
+  "koubo-sengan-sogo-sengan":"ng:不可です。公募（専願）と総合型（専願）の同時出願は認められません。",
+  "koubo-sengan-sogo-daiichi":"warn:推奨しませんが禁止はしません（本人判断）。両方合格した場合は公募（専願）合格校へ進学する旨の誓約書を取ってください。",
+  "koubo-sengan-sogo-heigan":"note:出願できますが、誓約書が必要です。両方合格した場合は専願の公募合格校へ進学してください。",
+  "sogo-sengan-koubo-sengan":"ng:不可です。総合型（専願）と公募（専願）の同時出願は認められません。",
+  "sogo-sengan-koubo-heigan":"note:出願できますが、誓約書が必要です。両方合格した場合は総合型（専願）合格校へ進学してください。",
+  "sogo-sengan-sogo-sengan":"ng:不可です。総合型（専願）同士の同時出願は認められません。",
+  "sogo-sengan-sogo-daiichi":"warn:推奨しませんが禁止はしません（本人判断）。両方合格した場合は総合型（専願）合格校へ進学する旨の誓約書を取ってください。",
+  "sogo-sengan-sogo-heigan":"note:出願できますが、誓約書が必要です。両方合格した場合は総合型（専願）合格校へ進学してください。",
+  "sogo-daiichi-shiteiko":"note:推奨しませんが禁止はしません。誓約書が必要です。「大学から問題視される可能性がある」ことを説明してください。",
+  "sogo-daiichi-koubo-sengan":"note:推奨しませんが禁止はしません。誓約書が必要です。両方合格した場合は公募（専願）合格校へ進学してください。",
+  "sogo-daiichi-koubo-heigan":"ok:出願できます。特に制限はありません。",
+  "sogo-daiichi-sogo-sengan":"note:推奨しませんが禁止はしません。誓約書が必要です。両方合格した場合は総合型（専願）合格校へ進学してください。",
+  "sogo-daiichi-sogo-daiichi":"warn:推奨しません（本人判断・自己責任）。複数の「第一志望要件」大学に合格し辞退が生じた場合のリスクを十分説明してください。",
+  "sogo-daiichi-sogo-heigan":"ok:出願できます。特に制限はありません。",
+};
+function judge(){
+  const a=document.getElementById("sel-A").value;
+  const b=document.getElementById("sel-B").value;
+  const r=document.getElementById("judge-result");
+  if(!a||!b){r.style.display="none";return;}
+  const key=a+"-"+b;
+  const rule=RULES[key];
+  if(!rule){r.className="judge-result result-note";r.textContent="このパターンは想定外のケースです。進路指導部に直接確認してください。";r.style.display="block";return;}
+  const idx=rule.indexOf(":");
+  const type=rule.substring(0,idx);
+  const msg=rule.substring(idx+1);
+  const cls={ok:"result-ok",warn:"result-warn",ng:"result-ng",note:"result-note"}[type]||"result-note";
+  r.className="judge-result "+cls;
+  r.textContent=msg;
+  r.style.display="block";
+}
+</script>
+</body>
+</html>
